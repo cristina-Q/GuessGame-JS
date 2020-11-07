@@ -1,0 +1,18 @@
+{
+  "name": "theclock",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "./node_modules/.bin/sass ./scss/app.scss ./css/style.css",
+    "minify": "./node_modules/.bin/sass ./scss/app.scss ./css/style.css --style compressed",
+    "watch": "./node_modules/.bin/sass --watch ./scss/app.scss:./css/style.css",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bootstrap": "^4.5.3",
+    "sass": "^1.28.0"
+  }
+}

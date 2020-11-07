@@ -1,0 +1,10 @@
+@import './fonts';
+
+@import '../node_modules/bootstrap/scss/bootstrap.scss';
+@import './variables';
+
+body {
+  background-color: rgb(34, 32, 32);
+  color: white;
+  font-family: 'Nokia Cellphone FC';
+}
