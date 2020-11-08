@@ -19,25 +19,132 @@
   <title>GuessGame</title>
 </head>
 
-<body class="container-fluid">
-  <header>
-    <h1>Guess My Number!</h1>
-    <p class="between">Between 1 and 100</p>
-    <button class="btn again">Try Again!</button>
-    <div class="number">?</div>
-  </header>
-  <main>
-    <section>
-      <input
-        type="number"
-        class="guess"
-      />
-      <button class="btn check">Check!</button>
-    </section>
-    <section>
-      <p class="message">Start guessing...</p>
-      <p class="label-score">Score: <span class="score">20</span></p>
-    </section>
+<body>
+  <main class="container-fluid">
+    <header class="row flex-column">
+      <div class="col py-3">
+        <button
+          id="btn-again"
+          class="btn text-custom border border-custom "
+        >
+          Try Again!
+        </button>
+      </div>
+
+      <div class="col d-flex align-items-center justify-content-center pb-4">
+        <h1 class=" main-title text-center">
+          Guess My Number!
+        </h1>
+      </div>
+
+      <div class="col d-flex justify-content-center">
+        <div class="bg-custom q-box">
+          <p
+            id="no-guess"
+            class="display-1 text-center pt-3 pr-4 pl-5"
+          >
+            ?
+          </p>
+        </div>
+      </div>
+
+      <div class="col d-flex flex-column align-items-center py-5">
+        <p>
+          Between 1 and 100
+        </p>
+      </div>
+    </header>
+
+
+    <main class="row justify-content-between">
+      <section class="col col-lg-4 d-flex flex-column left-side">
+        <input
+          type="number"
+          class="input-number mb-3 py-2"
+          placeholder="Insert your number here"
+        >
+
+        <button
+          id="btn-check"
+          class="btn text-custom border border-custom mb-5"
+        >
+          Check!
+        </button>
+
+        <div class="max-tries d-flex">
+
+          <span class="py-2">
+            Max tries:
+          </span>
+
+          <div class="hearts-wrapper d-flex ml-auto">
+            <div class="border border-custom">
+              <object
+                class="visible py-1"
+                id="heart-1"
+                data="media/pixel-heart.svg"
+                type="image/svg+xml"
+              ></object>
+            </div>
+
+            <div class="svg-wrapper border border-custom">
+              <object
+                class="visible py-1"
+                id="heart-1"
+                data="media/pixel-heart.svg"
+                type="image/svg+xml"
+              ></object>
+            </div>
+
+            <div class="svg-wrapper border border-custom">
+              <object
+                class="visible py-1"
+                id="heart-1"
+                data="media/pixel-heart.svg"
+                type="image/svg+xml"
+              ></object>
+            </div>
+
+            <div class="svg-wrapper border border-custom">
+              <object
+                class="invisible py-1"
+                id="heart-1"
+                data="media/pixel-heart.svg"
+                type="image/svg+xml"
+              ></object>
+            </div>
+
+            <div class="svg-wrapper border border-custom">
+              <object
+                class="invisible py-1"
+                id="heart-1"
+                data="media/pixel-heart.svg"
+                type="image/svg+xml"
+              ></object>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="score pt-3">
+          <p>Score:
+            <span class="score-no text-custom">0</span>
+          </p>
+        </div>
+      </section>
+
+
+      <section class="col col-lg-4 mb-5 right-side">
+        <div>
+          <p>Message Box:</p>
+        </div>
+
+        <div class="col border border-custom p-3">
+          <p>You can now:</p>
+          <p class="mesage">Start try Guessing the correct number!</p>
+        </div>
+      </section>
+    </main>
   </main>
 
   <script src="js/app.js"></script>

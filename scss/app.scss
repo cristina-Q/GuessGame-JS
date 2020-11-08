@@ -5,6 +5,43 @@
 
 body {
   background-color: rgb(34, 32, 32);
-  color: white;
+  color: rgb(231, 231, 231);
   font-family: 'Nokia Cellphone FC';
+}
+
+#no-guess {
+  color: rgb(34, 32, 32);
+  text-shadow: 4px 4px 2px rgb(112, 111, 111);
+}
+
+.main-title {
+  font-size: 4rem;
+  text-shadow: 4px 4px 2px rgb(58, 58, 58), 4px 6px 3px rgb(60, 255, 0);
+
+  @include media-breakpoint-down(xs) {
+    font-size: 3rem;
+  }
+}
+
+.q-box {
+  box-shadow: 8px 0px 0px 0px #6ebb4b, 0px 8px 0px 0px #167e30,
+    -8px 0px 0px 0px #026e11, 0px 0px 0px 8px #6ff163,
+    inset 3px 0px 23px 19px rgba(0, 0, 0, 0.46),
+    inset 5px -6px 25px 10px rgba(0, 0, 0, 0.46);
+}
+
+.right-side > div p:nth-child(1) {
+  letter-spacing: 2px;
+  white-space: nowrap;
+}
+
+#btn-again:hover,
+#btn-check:hover,
+#btn-again:focus,
+#btn-check:focus {
+  background-color: rgba(255, 0, 0, 0.582);
+}
+
+input[placeholder] {
+  text-align: center;
 }
