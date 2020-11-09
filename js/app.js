@@ -1,11 +1,13 @@
 let maxBoundary = 100;
 let randomNumber = Math.floor(Math.random() * maxBoundary) + 1;
+randomNumber = 26; // for test
+let guessNumber;
+
 let score = 0;
-//randomNumber = 26; // for test
 
 document.getElementById('btn-check').addEventListener('click', () => {
   resetState();
-  let guessNumber = Number(Math.abs(document.querySelector('.input-number').value));
+  guessNumber = Number(Math.abs(document.querySelector('.input-number').value));
 
   // When input number is the same as random one - player wins
   if (guessNumber === randomNumber) {
@@ -24,7 +26,7 @@ document.getElementById('btn-check').addEventListener('click', () => {
 
     //// When input number is NOT the same as random one
   } else if (guessNumber !== randomNumber && guessNumber !== 0) {
-    displayText('.message', guessNumber > randomNumber ? 'Your try is too HIGH!' : 'Your try is too LOW!');
+    displayText('.message', guideGuess());
 
     if (score >= 5) {
       score -= 5;
@@ -68,27 +70,30 @@ function resetState() {
 
 function winState() {
   displayText('.main-title', '🎉WOW!!! GUESSED IT!!🎉');
-  displayText('.message', '✨✨✨WOW!!! YOU GUESS THE NUMBER!!! ✨✨✨');
+  displayText('.message', '🐱‍👤🎉🎊WOW!!! YOU GUESS THE NUMBER!!! ');
   displayText('#q-box', randomNumber);
   changeProperty('body', 'background', '#6d014e');
 }
 
-function guideGuesss() {
+function guideGuess() {
   let guide;
   let differenceBTWnumbers = Math.abs(randomNumber - guessNumber);
 
   if (guessNumber > randomNumber) {
     if (differenceBTWnumbers >= 20) {
       guide = 'Your try is too HIGH! And you are far away!';
-    } else if (differenceBTWnumbers <= 10) {
-      guide = 'Your try is too HIGH but you are somehow close...';
-    } else if (differenceBTWnumbers <= 5) guide = 'Your try is too HIGH BUT you are pretty close';
+    } else if (differenceBTWnumbers <= 10 && differenceBTWnumbers > 5) {
+      guide = 'Your try is too HIGH but...🎈 you are somehow close...';
+    } else if (differenceBTWnumbers <= 5)
+      guide = 'Your try is too HIGH but...✨✨ you are pretty close!✨✨';
+    //
   } else if (guessNumber < randomNumber) {
     if (differenceBTWnumbers >= 20) {
-      guide = 'Your try is too HIGH! And you are far away!';
-    } else if (differenceBTWnumbers <= 10) {
-      guide = 'Your try is too HIGH but you are somehow close...';
-    } else if (differenceBTWnumbers <= 5) guide = 'Your try is too HIGH BUT you are pretty close';
+      guide = 'Your try is too LOW! And you are far away!';
+    } else if (differenceBTWnumbers <= 10 && differenceBTWnumbers > 5) {
+      guide = 'Your try is too LOW but...🎈 you are somehow close...';
+    } else if (differenceBTWnumbers <= 5)
+      guide = 'Your try is too LOW but...✨✨ you are pretty close!✨✨';
   }
 
   return guide;
