@@ -9,14 +9,11 @@ document.getElementById('btn-check').addEventListener('click', () => {
 
   // When input number is the same as random one - player wins
   if (guessNumber === randomNumber) {
-    displayText('.main-title', '🎉WOW!!! GUESSED IT!!🎉');
-    displayText('.message', '✨✨✨WOW!!! YOU GUESS THE NUMBER!!! ✨✨✨');
-    displayText('#q-box', randomNumber);
-    changeProperty('body', 'background', '#6d014e');
-
+    winState();
     score += 10;
     displayText('.score', score);
 
+    // gained back all lives
     for (let i = 1; i <= 5; i++) {
       let activObject = document.getElementById(`heart-${i}`);
 
@@ -27,7 +24,7 @@ document.getElementById('btn-check').addEventListener('click', () => {
 
     //// When input number is NOT the same as random one
   } else if (guessNumber !== randomNumber && guessNumber !== 0) {
-    displayText('.message', guessNumber > randomNumber ? 'Your try is too HIGH!' : 'Your try is to LOW!');
+    displayText('.message', guessNumber > randomNumber ? 'Your try is too HIGH!' : 'Your try is too LOW!');
 
     if (score >= 5) {
       score -= 5;
@@ -67,4 +64,11 @@ function resetState() {
   displayText('.message', 'Start try Guessing the correct number!');
   displayText('#q-box', '?');
   changeProperty('body', 'background', ' #222020');
+}
+
+function winState() {
+  displayText('.main-title', '🎉WOW!!! GUESSED IT!!🎉');
+  displayText('.message', '✨✨✨WOW!!! YOU GUESS THE NUMBER!!! ✨✨✨');
+  displayText('#q-box', randomNumber);
+  changeProperty('body', 'background', '#6d014e');
 }
