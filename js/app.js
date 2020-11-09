@@ -1,6 +1,6 @@
 let maxBoundary = 100;
 let randomNumber = Math.floor(Math.random() * maxBoundary) + 1;
-randomNumber = 26; // for test
+//randomNumber = 26; // for test
 let guessNumber;
 
 let score = 0;
