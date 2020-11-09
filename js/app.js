@@ -1,12 +1,11 @@
 let maxBoundary = 100;
 let randomNumber = Math.floor(Math.random() * maxBoundary) + 1;
-//randomNumber = 26; // for test
 let guessNumber;
 
 let score = 0;
 
 document.getElementById('btn-check').addEventListener('click', () => {
-  resetState();
+  resetState(); //reset state after win
   guessNumber = Number(Math.abs(document.querySelector('.input-number').value));
 
   // When input number is the same as random one - player wins
@@ -23,6 +22,7 @@ document.getElementById('btn-check').addEventListener('click', () => {
         activObject.classList.toggle('invisible');
       }
     }
+    randomNumber = Math.floor(Math.random() * maxBoundary) + 1;
 
     //// When input number is NOT the same as random one
   } else if (guessNumber !== randomNumber && guessNumber !== 0) {
@@ -84,16 +84,23 @@ function guideGuess() {
       guide = 'Your try is too HIGH! And you are far away!';
     } else if (differenceBTWnumbers <= 10 && differenceBTWnumbers > 5) {
       guide = 'Your try is too HIGH but...🎈 you are somehow close...';
-    } else if (differenceBTWnumbers <= 5)
+    } else if (differenceBTWnumbers <= 5) {
       guide = 'Your try is too HIGH but...✨✨ you are pretty close!✨✨';
+    } else {
+      guide = 'Your try is too HIGH!';
+    }
+
     //
   } else if (guessNumber < randomNumber) {
     if (differenceBTWnumbers >= 20) {
       guide = 'Your try is too LOW! And you are far away!';
     } else if (differenceBTWnumbers <= 10 && differenceBTWnumbers > 5) {
       guide = 'Your try is too LOW but...🎈 you are somehow close...';
-    } else if (differenceBTWnumbers <= 5)
+    } else if (differenceBTWnumbers <= 5) {
       guide = 'Your try is too LOW but...✨✨ you are pretty close!✨✨';
+    } else {
+      guide = 'Your try is too LOW!';
+    }
   }
 
   return guide;
