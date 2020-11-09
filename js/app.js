@@ -6,7 +6,6 @@ let score = 0;
 document.getElementById('btn-check').addEventListener('click', () => {
   resetState();
   let guessNumber = Number(Math.abs(document.querySelector('.input-number').value));
-  console.log(guessNumber, typeof guessNumber);
 
   // When input number is the same as random one - player wins
   if (guessNumber === randomNumber) {
@@ -27,7 +26,7 @@ document.getElementById('btn-check').addEventListener('click', () => {
     }
 
     //// When input number is NOT the same as random one
-  } else if (guessNumber !== randomNumber) {
+  } else if (guessNumber !== randomNumber && guessNumber !== 0) {
     displayText('.message', guessNumber > randomNumber ? 'Your try is too HIGH!' : 'Your try is to LOW!');
 
     if (score >= 5) {
@@ -46,6 +45,10 @@ document.getElementById('btn-check').addEventListener('click', () => {
       displayText('.message', 'You lost the game!!!🧨🧨🧨');
       displayText('.main-title', '🧨🧨 You lost the game!!! 🧨🧨');
     }
+
+    // When no input and check btn is clicked
+  } else if (guessNumber === 0) {
+    displayText('.message', 'Please insert a NUMBER between 1 and 100');
   }
 });
 
