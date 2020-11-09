@@ -10051,7 +10051,7 @@ body {
   font-family: "Nokia Cellphone FC";
 }
 
-#no-guess {
+#q-box {
   color: #222020;
   text-shadow: 4px 4px 2px #706f6f;
 }
@@ -10084,6 +10084,18 @@ body {
 
 input[placeholder] {
   text-align: center;
+}
+
+body::-webkit-scrollbar {
+  width: 0.5rem;
+}
+
+body::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.534);
+}
+
+body::-webkit-scrollbar-thumb {
+  background: var(--primary);
 }
 
 /*# sourceMappingURL=style.css.map */

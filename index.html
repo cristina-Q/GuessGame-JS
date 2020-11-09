@@ -20,19 +20,19 @@
 </head>
 
 <body>
-  <main class="container-fluid">
+  <main class="container-fluid main">
     <header class="row flex-column">
       <div class="col py-3">
-        <button
-          id="btn-again"
+        <a
+          href="/"
           class="btn text-custom border border-custom "
         >
-          Try Again!
-        </button>
+          New Game!
+        </a>
       </div>
 
       <div class="col d-flex align-items-center justify-content-center pb-4">
-        <h1 class=" main-title text-center">
+        <h1 class="main-title text-center">
           Guess My Number!
         </h1>
       </div>
@@ -40,7 +40,7 @@
       <div class="col d-flex justify-content-center">
         <div class="bg-custom q-box">
           <p
-            id="no-guess"
+            id="q-box"
             class="display-1 text-center pt-3 pr-4 pl-5"
           >
             ?
@@ -61,7 +61,7 @@
         <input
           type="number"
           class="input-number mb-3 py-2"
-          placeholder="Insert your number here"
+          placeholder="[ Insert your number ]"
         >
 
         <button
@@ -80,7 +80,7 @@
           <div class="hearts-wrapper d-flex ml-auto">
             <div class="border border-custom">
               <object
-                class="visible py-1"
+                class="py-1"
                 id="heart-1"
                 data="media/pixel-heart.svg"
                 type="image/svg+xml"
@@ -89,8 +89,8 @@
 
             <div class="svg-wrapper border border-custom">
               <object
-                class="visible py-1"
-                id="heart-1"
+                class="py-1"
+                id="heart-2"
                 data="media/pixel-heart.svg"
                 type="image/svg+xml"
               ></object>
@@ -98,8 +98,8 @@
 
             <div class="svg-wrapper border border-custom">
               <object
-                class="visible py-1"
-                id="heart-1"
+                class="py-1"
+                id="heart-3"
                 data="media/pixel-heart.svg"
                 type="image/svg+xml"
               ></object>
@@ -107,8 +107,8 @@
 
             <div class="svg-wrapper border border-custom">
               <object
-                class="invisible py-1"
-                id="heart-1"
+                class="py-1"
+                id="heart-4"
                 data="media/pixel-heart.svg"
                 type="image/svg+xml"
               ></object>
@@ -116,8 +116,8 @@
 
             <div class="svg-wrapper border border-custom">
               <object
-                class="invisible py-1"
-                id="heart-1"
+                class="py-1"
+                id="heart-5"
                 data="media/pixel-heart.svg"
                 type="image/svg+xml"
               ></object>
@@ -126,9 +126,9 @@
         </div>
 
 
-        <div class="score pt-3">
+        <div class="pt-3">
           <p>Score:
-            <span class="score-no text-custom">0</span>
+            <span class="score text-custom">0</span>
           </p>
         </div>
       </section>
@@ -140,8 +140,8 @@
         </div>
 
         <div class="col border border-custom p-3">
-          <p>You can now:</p>
-          <p class="mesage">Start try Guessing the correct number!</p>
+          <p>Your current log:</p>
+          <p class="message">Start try Guessing the correct number!</p>
         </div>
       </section>
     </main>
