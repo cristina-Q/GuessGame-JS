@@ -72,3 +72,24 @@ function winState() {
   displayText('#q-box', randomNumber);
   changeProperty('body', 'background', '#6d014e');
 }
+
+function guideGuesss() {
+  let guide;
+  let differenceBTWnumbers = Math.abs(randomNumber - guessNumber);
+
+  if (guessNumber > randomNumber) {
+    if (differenceBTWnumbers >= 20) {
+      guide = 'Your try is too HIGH! And you are far away!';
+    } else if (differenceBTWnumbers <= 10) {
+      guide = 'Your try is too HIGH but you are somehow close...';
+    } else if (differenceBTWnumbers <= 5) guide = 'Your try is too HIGH BUT you are pretty close';
+  } else if (guessNumber < randomNumber) {
+    if (differenceBTWnumbers >= 20) {
+      guide = 'Your try is too HIGH! And you are far away!';
+    } else if (differenceBTWnumbers <= 10) {
+      guide = 'Your try is too HIGH but you are somehow close...';
+    } else if (differenceBTWnumbers <= 5) guide = 'Your try is too HIGH BUT you are pretty close';
+  }
+
+  return guide;
+}
