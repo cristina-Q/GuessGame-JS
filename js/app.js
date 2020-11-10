@@ -1,7 +1,7 @@
 let form = document.querySelector('form');
 let maxBoundary = 100;
 let randomNumber = Math.floor(Math.random() * maxBoundary) + 1;
-let guessNumber = Math.abs(document.querySelector('.input-number').value);
+let guessNumber;
 
 let score = 0;
 
@@ -9,6 +9,7 @@ form.addEventListener(
   'submit',
   function (e) {
     resetState(); //reset state after win
+    guessNumber = Math.abs(document.querySelector('.input-number').value);
 
     // When input number is the same as random one - player wins
     if (guessNumber === randomNumber) {

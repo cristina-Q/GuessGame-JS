@@ -44,6 +44,22 @@ input[placeholder] {
   text-align: center;
 }
 
+#input-number::before {
+  content: '>>';
+  margin-top: 7px;
+  font-size: 1.5rem;
+  color: $primary;
+  padding: 5px;
+}
+
+#input-number::after {
+  content: '<<';
+  margin-top: 7px;
+  font-size: 1.5rem;
+  color: $primary;
+  padding: 5px;
+}
+
 body::-webkit-scrollbar {
   width: 0.5rem;
 }
@@ -56,9 +72,9 @@ body::-webkit-scrollbar-thumb {
   background: $primary;
 }
 
-label {
-  margin-top: 7px;
-  font-size: 1.5rem;
-  color: $primary;
-  padding: 5px;
-}
+// label {
+//   margin-top: 7px;
+//   font-size: 1.5rem;
+//   color: $primary;
+//   padding: 5px;
+// }
