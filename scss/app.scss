@@ -24,8 +24,10 @@ body {
 }
 
 .q-box {
-  box-shadow: 8px 0px 0px 0px #6ebb4b, 0px 8px 0px 0px #167e30, -8px 0px 0px 0px #026e11, 0px 0px 0px 8px #6ff163,
-    inset 3px 0px 23px 19px rgba(0, 0, 0, 0.46), inset 5px -6px 25px 10px rgba(0, 0, 0, 0.46);
+  box-shadow: 8px 0px 0px 0px #6ebb4b, 0px 8px 0px 0px #167e30,
+    -8px 0px 0px 0px #026e11, 0px 0px 0px 8px #6ff163,
+    inset 3px 0px 23px 19px rgba(0, 0, 0, 0.46),
+    inset 5px -6px 25px 10px rgba(0, 0, 0, 0.46);
 }
 
 .right-side > div p:nth-child(1) {
@@ -52,4 +54,11 @@ body::-webkit-scrollbar-track {
 
 body::-webkit-scrollbar-thumb {
   background: $primary;
+}
+
+label {
+  margin-top: 7px;
+  font-size: 1.5rem;
+  color: $primary;
+  padding: 5px;
 }

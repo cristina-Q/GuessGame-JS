@@ -10075,9 +10075,7 @@ body {
   white-space: nowrap;
 }
 
-#btn-again:hover,
 #btn-check:hover,
-#btn-again:focus,
 #btn-check:focus {
   background-color: rgba(255, 0, 0, 0.582);
 }
@@ -10096,6 +10094,13 @@ body::-webkit-scrollbar-track {
 
 body::-webkit-scrollbar-thumb {
   background: var(--primary);
+}
+
+label {
+  margin-top: 7px;
+  font-size: 1.5rem;
+  color: var(--primary);
+  padding: 5px;
 }
 
 /*# sourceMappingURL=style.css.map */

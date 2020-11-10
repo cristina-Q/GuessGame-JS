@@ -58,69 +58,77 @@
 
     <main class="row justify-content-between">
       <section class="col col-lg-4 d-flex flex-column left-side">
-        <input
-          type="number"
-          class="input-number mb-3 py-2"
-          placeholder="[ Insert your number ]"
+        <form
+          action="/"
+          class="d-flex flex-column"
         >
 
-        <button
-          id="btn-check"
-          class="btn text-custom border border-custom mb-5"
-        >
-          Check!
-        </button>
+          <div class="d-flex justify-content-around">
+            <label for="input-number"> >> </label>
+            <input
+              id="input-number"
+              type="number"
+              class="mb-3 py-2"
+              placeholder="[ Insert your number ]"
+            >
+            <label>
+              << </label>
+          </div>
+
+          <button
+            type="submit"
+            id="btn-check"
+            class="btn text-custom border border-custom mb-5"
+          >
+            Check!
+          </button>
+        </form>
 
         <div class="max-tries d-flex">
 
-          <span class="py-2">
+          <span class="py-2 pr-2">
             Max tries:
           </span>
 
           <div class="hearts-wrapper d-flex ml-auto">
             <div class="border border-custom">
-              <object
+              <img
                 class="py-1"
                 id="heart-1"
-                data="media/pixel-heart.svg"
-                type="image/svg+xml"
-              ></object>
+                src="media/pixel-heart.svg"
+              ></img>
             </div>
 
             <div class="svg-wrapper border border-custom">
-              <object
+              <img
                 class="py-1"
                 id="heart-2"
-                data="media/pixel-heart.svg"
-                type="image/svg+xml"
-              ></object>
+                src="media/pixel-heart.svg"
+              ></img>
             </div>
 
             <div class="svg-wrapper border border-custom">
-              <object
+              <img
                 class="py-1"
                 id="heart-3"
-                data="media/pixel-heart.svg"
-                type="image/svg+xml"
-              ></object>
+                src="media/pixel-heart.svg"
+              ></img>
             </div>
 
             <div class="svg-wrapper border border-custom">
-              <object
+              <img
                 class="py-1"
                 id="heart-4"
-                data="media/pixel-heart.svg"
-                type="image/svg+xml"
-              ></object>
+                src="media/pixel-heart.svg"
+              ></img>
             </div>
 
             <div class="svg-wrapper border border-custom">
-              <object
+              <img
                 class="py-1"
                 id="heart-5"
-                data="media/pixel-heart.svg"
-                type="image/svg+xml"
-              ></object>
+                src="media/pixel-heart.svg"
+              ></img>
             </div>
           </div>
         </div>
