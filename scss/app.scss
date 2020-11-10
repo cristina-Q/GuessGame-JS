@@ -71,10 +71,7 @@ body::-webkit-scrollbar-track {
 body::-webkit-scrollbar-thumb {
   background: $primary;
 }
-
-// label {
-//   margin-top: 7px;
-//   font-size: 1.5rem;
-//   color: $primary;
-//   padding: 5px;
-// }
+.main {
+  width: 100%;
+  max-width: 1500px;
+}
