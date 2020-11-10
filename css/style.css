@@ -10067,6 +10067,7 @@ body {
 }
 
 .q-box {
+  border: 7px inset rgba(22, 18, 18, 0.6);
   box-shadow: 8px 0px 0px 0px #6ebb4b, 0px 8px 0px 0px #167e30, -8px 0px 0px 0px #026e11, 0px 0px 0px 8px #6ff163, inset 3px 0px 23px 19px rgba(0, 0, 0, 0.46), inset 5px -6px 25px 10px rgba(0, 0, 0, 0.46);
 }
 
@@ -10115,6 +10116,29 @@ body::-webkit-scrollbar-thumb {
 .main {
   width: 100%;
   max-width: 1500px;
+}
+
+.message {
+  font-size: 18px;
+  letter-spacing: 2px;
+  text-shadow: 3px 3px 2px #000000;
+  color: #5ac64c;
+}
+
+legend {
+  width: initial;
+  font-size: 1.1rem;
+  background-color: #458d45;
+  padding: 6px 11px;
+  box-shadow: inset -2px 5px 15px 12px rgba(0, 0, 0, 0.46), 6px 0px 7px 4px rgba(0, 0, 0, 0.46);
+}
+
+.right-side {
+  min-width: 244px;
+}
+
+fieldset {
+  border: 5px inset #4d4c4c;
 }
 
 /*# sourceMappingURL=style.css.map */
