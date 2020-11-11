@@ -1,18 +1,18 @@
 let form = document.querySelector('form');
-let maxBoundary = 100;
-let randomNumber = Math.floor(Math.random() * maxBoundary) + 1;
 let userNumber = document.querySelector('.user-input');
 
+let maxBoundary = 100;
 let score = 0;
+let randomNumber = generateRandomNumber(maxBoundary);
 
 form.addEventListener(
   'submit',
   function (e) {
     resetState(); //reset state after win
-    let guessNumber = Math.abs(userNumber.value);
+    let userGuess = Math.abs(userNumber.value);
 
     // When input number is the same as random one - player wins
-    if (guessNumber === randomNumber) {
+    if (userGuess === randomNumber) {
       winState();
       score += 10;
       displayText('.score', score);
@@ -25,15 +25,26 @@ form.addEventListener(
           activObject.classList.toggle('invisible');
         }
       }
-      randomNumber = Math.floor(Math.random() * maxBoundary) + 1;
+    }
 
-      //// When input number is NOT the same as random one
-    } else if (guessNumber !== randomNumber && guessNumber !== 0) {
-      displayText('.message', guideGuess(guessNumber, randomNumber));
+    // When input number is OUT of range
+    else if (userGuess === 0 || userGuess > 100 || userGuess < 0) {
+      displayText(
+        `.message`,
+        `Please insert a NUMBER between 1 and ${maxBoundary}`,
+      );
+    }
 
+    // When input number is NOT the same as random one but still in range
+    else if (userGuess !== randomNumber) {
+      displayText('.message', guideGuess(userGuess, randomNumber));
+
+      // decreases the score
       if (score >= 5) {
         score -= 5;
         displayText('.score', score);
+
+        // decreases the lives
       } else if (document.querySelectorAll(`.invisible`).length < 5) {
         for (let i = 5; i <= 5; i--) {
           let activObject = document.getElementById(`heart-${i}`);
@@ -42,17 +53,10 @@ form.addEventListener(
             break;
           }
         }
+        // nothing else to lose = loseState
       } else {
-        displayText(`.message`, `You lost the game!!!🧨🧨🧨`);
-        displayText(`.main-title`, `🧨🧨 You lost the game!!! 🧨🧨`);
+        loseState();
       }
-
-      // When no input and check btn is clicked
-    } else if (guessNumber === 0) {
-      displayText(
-        `.message`,
-        `Please insert a NUMBER between 1 and ${maxBoundary}`,
-      );
     }
 
     e.preventDefault();
@@ -82,6 +86,14 @@ function winState() {
   displayText('.message', '🐱‍👤🎉🎊WOW!!! YOU GUESS THE NUMBER!!! ');
   displayText('#q-box', randomNumber);
   changeProperty('body', 'background', '#6d014e');
+  randomNumber = generateRandomNumber(maxBoundary);
+}
+
+function loseState() {
+  displayText(`.message`, `You lost the game!!!🧨🧨🧨`);
+  displayText(`.main-title`, `🧨🧨 You lost the game!!! 🧨🧨`);
+  displayText('#q-box', randomNumber);
+  randomNumber = generateRandomNumber(maxBoundary);
 }
 
 function guideGuess(inputNumber, generatedNumber) {
@@ -113,4 +125,9 @@ function guideGuess(inputNumber, generatedNumber) {
   }
 
   return guide;
+}
+
+function generateRandomNumber(maxLimit) {
+  random = Math.floor(Math.random() * maxLimit) + 1;
+  return random;
 }
