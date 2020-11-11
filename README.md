@@ -8,6 +8,3 @@
 
 [![](media/laptop.png)](https://guessgame-js.netlify.app/)
 
-<p style=" align: center; width: 100%">
-  <img src="media/mob.png">
-</p>
