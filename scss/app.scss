@@ -74,7 +74,8 @@ legend {
   font-size: 1.1rem;
   background-color: #737873a8;
   padding: 6px 11px;
-  color: #5ac64c;
+  color: #57af4c;
+  text-shadow: 3px 3px 1px black;
   box-shadow: inset -2px 5px 15px 12px rgba(0, 0, 0, 0.46),
     6px 0px 7px 4px rgba(0, 0, 0, 0.46);
 }
@@ -84,11 +85,9 @@ legend {
 }
 
 fieldset {
-  p {
-    color: #5ac64c;
-  }
   border: 5px inset #4d4c4c;
   overflow: hidden;
+
   &::before {
     content: '';
     background: inherit;
@@ -97,9 +96,13 @@ fieldset {
     right: 2px;
     top: 0px;
     bottom: 6px;
-    background-color: #4343434a;
+    background-color: #43434308;
     box-shadow: inset -15px -4px 20px 2px #37f237ab;
     z-index: 1;
+  }
+
+  p {
+    color: #5ac64c;
   }
 }
 
