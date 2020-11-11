@@ -45,22 +45,6 @@ input[placeholder] {
   text-align: center;
 }
 
-.user-input::before {
-  content: '>>';
-  margin-top: 7px;
-  font-size: 1.5rem;
-  color: $primary;
-  padding: 5px;
-}
-
-.user-input::after {
-  content: '<<';
-  margin-top: 7px;
-  font-size: 1.5rem;
-  color: $primary;
-  padding: 5px;
-}
-
 body::-webkit-scrollbar {
   width: 0.5rem;
 }
@@ -78,17 +62,19 @@ body::-webkit-scrollbar-thumb {
 }
 
 .message {
+  position: relative;
   font-size: 18px;
   letter-spacing: 2px;
   text-shadow: 3px 3px 2px#000000;
-  color: #5ac64c;
+  color: inherit;
 }
 
 legend {
   width: initial;
   font-size: 1.1rem;
-  background-color: #458d45;
+  background-color: #737873a8;
   padding: 6px 11px;
+  color: #5ac64c;
   box-shadow: inset -2px 5px 15px 12px rgba(0, 0, 0, 0.46),
     6px 0px 7px 4px rgba(0, 0, 0, 0.46);
 }
@@ -98,5 +84,27 @@ legend {
 }
 
 fieldset {
+  p {
+    color: #5ac64c;
+  }
   border: 5px inset #4d4c4c;
+  overflow: hidden;
+  &::before {
+    content: '';
+    background: inherit;
+    position: absolute;
+    left: 1px;
+    right: 2px;
+    top: 0px;
+    bottom: 6px;
+    background-color: #4343434a;
+    box-shadow: inset -15px -4px 20px 2px #37f237ab;
+    z-index: 1;
+  }
+}
+
+.user-input::before {
+  content: '>>';
+  font-size: 18px;
+  color: #6ff163;
 }

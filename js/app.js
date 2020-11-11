@@ -9,7 +9,7 @@ form.addEventListener(
   'submit',
   function (e) {
     resetState(); //reset state after win
-    let userGuess = Math.abs(userNumber.value);
+    let userGuess = Number(userNumber.value);
 
     // When input number is the same as random one - player wins
     if (userGuess === randomNumber) {
@@ -93,7 +93,7 @@ function loseState() {
   displayText(`.message`, `You lost the game!!!🧨🧨🧨`);
   displayText(`.main-title`, `🧨🧨 You lost the game!!! 🧨🧨`);
   displayText('#q-box', randomNumber);
-  randomNumber = generateRandomNumber(maxBoundary);
+  randomNumber = '☠';
 }
 
 function guideGuess(inputNumber, generatedNumber) {
