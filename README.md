@@ -2,5 +2,4 @@
 
 [Try Guess](https://guessgame-js.netlify.app/)
 
-[![]()](https://guessgame-js.netlify.app/)
-
+[![](media/guessjs.png)](https://guessgame-js.netlify.app/)
