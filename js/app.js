@@ -9,7 +9,7 @@ form.addEventListener(
   'submit',
   function (e) {
     resetState(); //reset state after win
-    guessNumber = Math.abs(document.querySelector('.input-number').value);
+    guessNumber = Math.abs(document.querySelector('.user-input').value);
 
     // When input number is the same as random one - player wins
     if (guessNumber === randomNumber) {
@@ -29,7 +29,7 @@ form.addEventListener(
 
       //// When input number is NOT the same as random one
     } else if (guessNumber !== randomNumber && guessNumber !== 0) {
-      displayText('.message', guideGuess());
+      displayText('.message', guideGuess(guessNumber, randomNumber));
 
       if (score >= 5) {
         score -= 5;
@@ -81,11 +81,11 @@ function winState() {
   changeProperty('body', 'background', '#6d014e');
 }
 
-function guideGuess() {
+function guideGuess(inputNumber, generatedNumber) {
   let guide;
-  let differenceBTWnumbers = Math.abs(randomNumber - guessNumber);
+  let differenceBTWnumbers = Math.abs(generatedNumber - inputNumber);
 
-  if (guessNumber > randomNumber) {
+  if (inputNumber > generatedNumber) {
     if (differenceBTWnumbers >= 20) {
       guide = 'Your try is too HIGH! And you are far away!';
     } else if (differenceBTWnumbers <= 10 && differenceBTWnumbers > 5) {
@@ -97,7 +97,7 @@ function guideGuess() {
     }
 
     //
-  } else if (guessNumber < randomNumber) {
+  } else if (inputNumber < generatedNumber) {
     if (differenceBTWnumbers >= 20) {
       guide = 'Your try is too LOW! And you are far away!';
     } else if (differenceBTWnumbers <= 10 && differenceBTWnumbers > 5) {
