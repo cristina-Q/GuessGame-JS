@@ -1,6 +1,7 @@
-# Guess my Number Game - JavaScript
+# Try Guess
+> > > ### Fully **responsive**
 
-[Try Guess](https://guessgame-js.netlify.app/)
+### [Guess my Number Game - JavaScript](https://guessgame-js.netlify.app/)
 
 [![](media/mob.png)](https://guessgame-js.netlify.app/)
 
