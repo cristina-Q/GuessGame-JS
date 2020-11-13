@@ -1,8 +1,9 @@
 const form = document.querySelector('#form');
-let userNumber = document.querySelector('.user-input');
+const userNumber = document.querySelector('.user-input');
 
 let maxBoundary = 100;
 let score = 0;
+let highscore = 0;
 let randomNumber = generateRandomNumber(maxBoundary);
 
 form.addEventListener(
@@ -17,6 +18,11 @@ form.addEventListener(
       winState();
       score += 10;
       displayText('.score', score);
+
+      if (score > highscore) {
+        highscore = score;
+        displayText('.highscore', highscore);
+      }
 
       // gained back all lives
       for (let i = 1; i <= 5; i++) {
