@@ -40,13 +40,8 @@ form.addEventListener(
     else if (userGuess !== randomNumber) {
       displayText('.message', guideGuess(userGuess, randomNumber));
 
-      // decreases the score
-      if (score >= 5) {
-        score -= 5;
-        displayText('.score', score);
-
-        // decreases the lives
-      } else if (document.querySelectorAll(`.invisible`).length < 5) {
+      // decreases the lives
+      if (document.querySelectorAll(`.invisible`).length < 5) {
         for (let i = 5; i <= 5; i--) {
           let activObject = document.getElementById(`heart-${i}`);
           if (!activObject.classList.contains(`invisible`)) {
@@ -54,8 +49,15 @@ form.addEventListener(
             break;
           }
         }
-        // nothing else to lose = loseState
-      } else {
+      }
+
+      // decreases the score
+      else if (score >= 5) {
+        score -= 5;
+        displayText('.score', score);
+      }
+      // nothing else to lose = loseState
+      else {
         loseState();
       }
     }
