@@ -1,9 +1,10 @@
 const form = document.querySelector('#form');
 const userNumber = document.querySelector('.user-input');
+let localStorageName = 'guessnumber';
 
 let maxBoundary = 100;
 let score = 0;
-let highscore;
+let highscore = 0;
 let randomNumber = generateRandomNumber(maxBoundary);
 
 form.addEventListener(
@@ -19,19 +20,12 @@ form.addEventListener(
       score += 10;
       displayText('.score', score);
 
-      if (highscore === undefined || score > highscore) {
+      if (score > highscore) {
         highscore = score;
         displayText('.highscore', highscore);
       }
 
-      // gained back all lives
-      for (let i = 1; i <= 5; i++) {
-        let activObject = document.getElementById(`heart-${i}`);
-
-        if (activObject.classList.contains('invisible')) {
-          activObject.classList.toggle('invisible');
-        }
-      }
+      getBackLives();
     }
 
     // When input number is OUT of range
@@ -73,14 +67,32 @@ form.addEventListener(
   false,
 );
 
-document.querySelector('.new-game').addEventListener('click', function () {
-  form.reset();
-  // no need to do this because it jumps to global scope that's why HighScore is lost
-  // score = 0;
-  // randomNumber = generateRandomNumber(maxBoundary);
-});
+document.querySelector('.new-game').addEventListener(
+  'click',
+  function (e) {
+    e.preventDefault();
+    newGameState();
+  },
+  false,
+);
 
-//-------------------------- reuse functions
+//****************************************** reuse functions
+
+function generateRandomNumber(maxLimit) {
+  random = Math.floor(Math.random() * maxLimit) + 1;
+  return random;
+}
+
+function getBackLives() {
+  // gained back all lives
+  for (let i = 1; i <= 5; i++) {
+    let activObject = document.getElementById(`heart-${i}`);
+
+    if (activObject.classList.contains('invisible')) {
+      activObject.classList.toggle('invisible');
+    }
+  }
+}
 
 function displayText(selector, message) {
   document.querySelector(selector).textContent = message;
@@ -90,6 +102,7 @@ function changeProperty(selector, property, colorHex) {
   document.querySelector(selector).style[property] = colorHex;
 }
 
+//-------------- Different States -----------------
 function resetState() {
   displayText('.main-title', 'Guess My Number!');
   displayText('.message', 'Start try Guessing the correct number!');
@@ -108,10 +121,22 @@ function winState() {
 function loseState() {
   displayText(`.message`, `You lost the game!!!🧨🧨🧨`);
   displayText(`.main-title`, `🧨🧨 You lost the game!!! 🧨🧨`);
+  displayText('.highscore', highscore);
   displayText('#q-box', randomNumber);
   randomNumber = '☠';
 }
 
+function newGameState() {
+  form.reset();
+  score = 0;
+  randomNumber = generateRandomNumber(maxBoundary);
+  displayText('.score', score);
+  displayText('.highscore', highscore);
+  getBackLives();
+  resetState();
+}
+
+//--------------  precision estimator  --------------
 function guideGuess(inputNumber, generatedNumber) {
   let guide;
   let differenceBTWnumbers = Math.abs(generatedNumber - inputNumber);
@@ -126,8 +151,6 @@ function guideGuess(inputNumber, generatedNumber) {
     } else {
       guide = 'Your try is too HIGH!';
     }
-
-    //
   } else if (inputNumber < generatedNumber) {
     if (differenceBTWnumbers >= 20) {
       guide = 'Your try is too LOW! And you are far away!';
@@ -141,9 +164,4 @@ function guideGuess(inputNumber, generatedNumber) {
   }
 
   return guide;
-}
-
-function generateRandomNumber(maxLimit) {
-  random = Math.floor(Math.random() * maxLimit) + 1;
-  return random;
 }
