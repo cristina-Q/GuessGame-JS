@@ -1,4 +1,4 @@
-let form = document.querySelector('form');
+const form = document.querySelector('#form');
 let userNumber = document.querySelector('.user-input');
 
 let maxBoundary = 100;
@@ -10,6 +10,7 @@ form.addEventListener(
   function (e) {
     resetState(); //reset state after win
     let userGuess = Number(userNumber.value);
+    userNumber.value = '';
 
     // When input number is the same as random one - player wins
     if (userGuess === randomNumber) {

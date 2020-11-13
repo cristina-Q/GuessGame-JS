@@ -59,14 +59,17 @@
     <main class="row justify-content-between">
       <section class="col col-lg-4 d-flex flex-column mb-2 left-side">
         <form
+          id="form"
           action="/"
           class="d-flex flex-column"
         >
-          <input
-            type="number"
-            class="user-input mb-3 py-2"
-            placeholder="[ Insert your number ]"
-          >
+          <div class="input-wrapper d-flex justify-content-between ">
+            <input
+              type="number"
+              class="user-input py-2 mb-3"
+              placeholder="[ Insert your number ]"
+            >
+          </div>
 
           <button
             type="submit"

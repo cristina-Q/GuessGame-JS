@@ -10050,25 +10050,35 @@ body {
   color: #e7e7e7;
   font-family: "Nokia Cellphone FC";
 }
-
-#q-box {
-  color: #222020;
-  text-shadow: 4px 4px 2px #706f6f;
+body::-webkit-scrollbar {
+  width: 0.5rem;
 }
-
-.main-title {
+body::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.534);
+}
+body::-webkit-scrollbar-thumb {
+  background: var(--primary);
+}
+body main {
+  width: 100%;
+  max-width: 1500px;
+}
+body main .main-title {
   font-size: 4rem;
   text-shadow: 4px 4px 2px #3a3a3a, 4px 6px 3px #3cff00;
 }
 @media (max-width: 575.98px) {
-  .main-title {
+  body main .main-title {
     font-size: 3rem;
   }
 }
-
-.q-box {
+body main .q-box {
   border: 7px inset rgba(22, 18, 18, 0.6);
   box-shadow: 8px 0px 0px 0px #6ebb4b, 0px 8px 0px 0px #167e30, -8px 0px 0px 0px #026e11, 0px 0px 0px 8px #6ff163, inset 3px 0px 23px 19px rgba(0, 0, 0, 0.46), inset 5px -6px 25px 10px rgba(0, 0, 0, 0.46);
+}
+body main .q-box #q-box {
+  color: #222020;
+  text-shadow: 4px 4px 2px #706f6f;
 }
 
 .right-side > div p:nth-child(1) {
@@ -10079,27 +10089,6 @@ body {
 #btn-check:hover,
 #btn-check:focus {
   background-color: rgba(255, 0, 0, 0.582);
-}
-
-input[placeholder] {
-  text-align: center;
-}
-
-body::-webkit-scrollbar {
-  width: 0.5rem;
-}
-
-body::-webkit-scrollbar-track {
-  background: rgba(0, 0, 0, 0.534);
-}
-
-body::-webkit-scrollbar-thumb {
-  background: var(--primary);
-}
-
-.main {
-  width: 100%;
-  max-width: 1500px;
 }
 
 .message {
@@ -10143,10 +10132,39 @@ fieldset::before {
 fieldset p {
   color: #5ac64c;
 }
-
-.user-input::before {
-  content: ">>";
+fieldset p:nth-child(2)::before {
+  content: ">> ";
   font-size: 18px;
+  color: #6ff163;
+}
+
+.user-input {
+  -moz-appearance: textfield;
+}
+.user-input::-webkit-inner-spin-button, .user-input::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+}
+.user-input:active {
+  border-color: #6ff163;
+}
+.user-input:focus {
+  outline: none;
+}
+.user-input[placeholder] {
+  text-align: center;
+}
+
+.input-wrapper::before {
+  content: ">>";
+  padding-right: 5px;
+  font-size: 25px;
+  color: #6ff163;
+}
+
+.input-wrapper::after {
+  content: "<<";
+  padding-left: 5px;
+  font-size: 25px;
   color: #6ff163;
 }
 

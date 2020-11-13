@@ -7,28 +7,45 @@ body {
   background-color: #222020;
   color: rgb(231, 231, 231);
   font-family: 'Nokia Cellphone FC';
-}
 
-#q-box {
-  color: rgb(34, 32, 32);
-  text-shadow: 4px 4px 2px rgb(112, 111, 111);
-}
-
-.main-title {
-  font-size: 4rem;
-  text-shadow: 4px 4px 2px rgb(58, 58, 58), 4px 6px 3px rgb(60, 255, 0);
-
-  @include media-breakpoint-down(xs) {
-    font-size: 3rem;
+  &::-webkit-scrollbar {
+    width: 0.5rem;
   }
-}
 
-.q-box {
-  border: 7px inset hsla(0, 10%, 8%, 0.6);
-  box-shadow: 8px 0px 0px 0px #6ebb4b, 0px 8px 0px 0px #167e30,
-    -8px 0px 0px 0px #026e11, 0px 0px 0px 8px #6ff163,
-    inset 3px 0px 23px 19px rgba(0, 0, 0, 0.46),
-    inset 5px -6px 25px 10px rgba(0, 0, 0, 0.46);
+  &::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.534);
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: $primary;
+  }
+
+  main {
+    width: 100%;
+    max-width: 1500px;
+
+    .main-title {
+      font-size: 4rem;
+      text-shadow: 4px 4px 2px rgb(58, 58, 58), 4px 6px 3px rgb(60, 255, 0);
+
+      @include media-breakpoint-down(xs) {
+        font-size: 3rem;
+      }
+    }
+
+    .q-box {
+      #q-box {
+        color: rgb(34, 32, 32);
+        text-shadow: 4px 4px 2px rgb(112, 111, 111);
+      }
+
+      border: 7px inset hsla(0, 10%, 8%, 0.6);
+      box-shadow: 8px 0px 0px 0px #6ebb4b, 0px 8px 0px 0px #167e30,
+        -8px 0px 0px 0px #026e11, 0px 0px 0px 8px #6ff163,
+        inset 3px 0px 23px 19px rgba(0, 0, 0, 0.46),
+        inset 5px -6px 25px 10px rgba(0, 0, 0, 0.46);
+    }
+  }
 }
 
 .right-side > div p:nth-child(1) {
@@ -39,26 +56,6 @@ body {
 #btn-check:hover,
 #btn-check:focus {
   background-color: rgba(255, 0, 0, 0.582);
-}
-
-input[placeholder] {
-  text-align: center;
-}
-
-body::-webkit-scrollbar {
-  width: 0.5rem;
-}
-
-body::-webkit-scrollbar-track {
-  background: rgba(0, 0, 0, 0.534);
-}
-
-body::-webkit-scrollbar-thumb {
-  background: $primary;
-}
-.main {
-  width: 100%;
-  max-width: 1500px;
 }
 
 .message {
@@ -103,11 +100,46 @@ fieldset {
 
   p {
     color: #5ac64c;
+
+    &:nth-child(2)::before {
+      content: '>> ';
+      font-size: 18px;
+      color: #6ff163;
+    }
   }
 }
 
-.user-input::before {
+.user-input {
+  // Remove Arrows/Spinners
+  -moz-appearance: textfield;
+  &::-webkit-inner-spin-button,
+  &::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+  }
+
+  &:active {
+    border-color: #6ff163;
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  &[placeholder] {
+    text-align: center;
+  }
+}
+
+.input-wrapper::before {
   content: '>>';
-  font-size: 18px;
+  padding-right: 5px;
+  font-size: 25px;
+  color: #6ff163;
+}
+
+.input-wrapper::after {
+  content: '<<';
+  padding-left: 5px;
+  font-size: 25px;
   color: #6ff163;
 }
