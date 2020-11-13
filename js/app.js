@@ -3,7 +3,7 @@ const userNumber = document.querySelector('.user-input');
 
 let maxBoundary = 100;
 let score = 0;
-let highscore = 0;
+let highscore;
 let randomNumber = generateRandomNumber(maxBoundary);
 
 form.addEventListener(
@@ -19,7 +19,7 @@ form.addEventListener(
       score += 10;
       displayText('.score', score);
 
-      if (score > highscore) {
+      if (highscore === undefined || score > highscore) {
         highscore = score;
         displayText('.highscore', highscore);
       }
@@ -72,6 +72,13 @@ form.addEventListener(
   },
   false,
 );
+
+document.querySelector('.new-game').addEventListener('click', function () {
+  form.reset();
+  // no need to do this because it jumps to global scope that's why HighScore is lost
+  // score = 0;
+  // randomNumber = generateRandomNumber(maxBoundary);
+});
 
 //-------------------------- reuse functions
 
