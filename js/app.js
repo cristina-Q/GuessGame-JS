@@ -1,10 +1,11 @@
 const form = document.querySelector('#form');
 const userNumber = document.querySelector('.user-input');
-let localStorageName = 'guessnumber';
 
 let maxBoundary = 100;
 let score = 0;
-let highscore = 0;
+let highscore = Number(localStorage.getItem('highscore'));
+displayText('.highscore', highscore);
+
 let randomNumber = generateRandomNumber(maxBoundary);
 
 form.addEventListener(
@@ -62,6 +63,7 @@ form.addEventListener(
       }
     }
 
+    localStorage.setItem(`highscore`, `${highscore}`);
     e.preventDefault();
   },
   false,
