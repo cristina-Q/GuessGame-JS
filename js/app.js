@@ -1,5 +1,7 @@
 const form = document.querySelector('#form');
 const userNumber = document.querySelector('.user-input');
+const winSound = new Audio('./media/winsound.mp3');
+winSound.volume = 0.4;
 
 let maxBoundary = 100;
 let score = 0;
@@ -113,6 +115,7 @@ function resetState() {
 }
 
 function winState() {
+  winSound.play();
   displayText('.main-title', '🎉WOW!!! GUESSED IT!!🎉');
   displayText('.message', '🐱‍👤🎉🎊WOW!!! YOU GUESS THE NUMBER!!! ');
   displayText('#q-box', randomNumber);
