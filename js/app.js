@@ -1,7 +1,11 @@
 const form = document.querySelector('#form');
 const userNumber = document.querySelector('.user-input');
 const winSound = new Audio('./media/winsound.mp3');
+const loseSound = new Audio('./media/losesound.mp3');
+const cashSound = new Audio('media/cashsound.mp3');
 winSound.volume = 0.4;
+loseSound.volume = 0.4;
+cashSound.volume = 0.4;
 
 let maxBoundary = 100;
 let score = 0;
@@ -115,15 +119,17 @@ function resetState() {
 }
 
 function winState() {
-  winSound.play();
+  // winSound.play();
   displayText('.main-title', '🎉WOW!!! GUESSED IT!!🎉');
   displayText('.message', '🐱‍👤🎉🎊WOW!!! YOU GUESS THE NUMBER!!! ');
   displayText('#q-box', randomNumber);
   changeProperty('body', 'background', '#6d014e');
   randomNumber = generateRandomNumber(maxBoundary);
+  cashSound.play();
 }
 
 function loseState() {
+  loseSound.play();
   displayText(`.message`, `You lost the game!!!🧨🧨🧨`);
   displayText(`.main-title`, `🧨🧨 You lost the game!!! 🧨🧨`);
   displayText('.highscore', highscore);
