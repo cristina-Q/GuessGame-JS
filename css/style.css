@@ -10045,6 +10045,28 @@ h3 {
   --primary: rgb(42, 179, 60);
 }
 
+.sociallocker-links > a:nth-child(2) {
+  color: var(--primary);
+  text-decoration: none;
+}
+.sociallocker-links > a:first-child {
+  color: var(--primary);
+  text-decoration: none;
+}
+.sociallocker-links > a:first-child span {
+  color: white;
+}
+.sociallocker-links > a:first-child i {
+  background-color: var(--primary);
+  color: #fff;
+  text-shadow: 4px 4px 2px #3a3a3a, 4px 6px 3px #3cff00;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-right: 15px;
+  padding-left: 15px;
+  font-size: 2rem;
+}
+
 body {
   background-color: #222020;
   color: #e7e7e7;
