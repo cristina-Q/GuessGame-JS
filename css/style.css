@@ -10045,6 +10045,25 @@ h3 {
   --primary: rgb(42, 179, 60);
 }
 
+.social-links > a {
+  color: var(--primary);
+  text-decoration: none;
+}
+.social-links span {
+  color: white;
+}
+.social-links i {
+  background-color: var(--primary);
+  color: #fff;
+  text-shadow: 4px 4px 2px #3a3a3a, 4px 6px 3px #3cff00;
+  padding: 4px 15px 4px 15px;
+  font-size: 2rem;
+}
+.social-links > a > img {
+  width: 45px;
+  height: 45px;
+}
+
 body {
   background-color: #222020;
   color: #e7e7e7;

@@ -17,39 +17,79 @@
     type="image/png"
   >
   <title>GuessGame</title>
+
+  <!-- Open Graph tags to customize link previews -->
+  <meta
+    property="og:url"
+    content="https://guessgame-js.netlify.app/"
+  />
+  <meta
+    property="og:type"
+    content="website"
+  />
+  <meta
+    property="og:title"
+    content="GuessGame"
+  />
+  <meta
+    property="og:description"
+    content="Find how many times you can guess the correnct number"
+  />
+  <meta
+    property="og:image"
+    content="media/mob.png"
+  />
 </head>
 
 <body>
   <main class="container-fluid main">
     <header class="row flex-column">
       <div class="col py-3">
-        <button class="new-game border border-custom bg-transparent p-2 text-custom">
-          New Game!
-        </button>
-      </div>
+        <div class="header-top-wrapper d-flex mb-3">
+          <button class="new-game border border-custom bg-transparent p-2 text-custom mr-2">
+            New Game!
+          </button>
 
-      <div class="col d-flex align-items-center justify-content-center pb-4">
-        <h1 class="main-title text-center">
-          Guess My Number!
-        </h1>
-      </div>
+          <div class="social-links d-flex">
+            <a href="https://www.facebook.com/sharer/sharer.php?u=https://guessgame-js.netlify.app/">
+              <i class="fb-share">f</i>
+              ><span>></span> share
+            </a>
 
-      <div class="col d-flex justify-content-center">
-        <div class="bg-custom q-box">
-          <p
-            id="q-box"
-            class="display-1 text-center pt-3 pr-4 pl-5"
-          >
-            ?
+            <!-- <a
+              class="twitter-share"
+              href="http://twitter.com/share?text=GuessGame Retro style&url=https://guessgame-js.netlify.app/&hashtags=JavaScript,webdesign,html5"
+            >
+              <img
+                src="media/twitter.png"
+                alt="twitter-share"
+              >><span>></span> share
+            </a> -->
+          </div>
+        </div>
+
+        <div class="col d-flex align-items-center justify-content-center pb-4">
+          <h1 class="main-title text-center">
+            Guess My Number!
+          </h1>
+        </div>
+
+        <div class="col d-flex justify-content-center">
+          <div class="bg-custom q-box">
+            <p
+              id="q-box"
+              class="display-1 text-center pt-3 pr-4 pl-5"
+            >
+              ?
+            </p>
+          </div>
+        </div>
+
+        <div class="col d-flex flex-column align-items-center py-5">
+          <p>
+            Between 1 and 100
           </p>
         </div>
-      </div>
-
-      <div class="col d-flex flex-column align-items-center py-5">
-        <p>
-          Between 1 and 100
-        </p>
-      </div>
     </header>
 
 
@@ -63,7 +103,7 @@
           <div class="input-wrapper d-flex justify-content-between ">
             <input
               type="number"
-              class="user-input py-2 mb-3"
+              class="user-input p-2 mb-3"
               placeholder="[ Insert your number ]"
             >
           </div>

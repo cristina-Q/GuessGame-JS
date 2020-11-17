@@ -1,0 +1,23 @@
+.social-links {
+  > a {
+    color: $primary;
+    text-decoration: none;
+  }
+
+  span {
+    color: white;
+  }
+
+  i {
+    background-color: $primary;
+    color: #fff;
+    text-shadow: 4px 4px 2px rgb(58, 58, 58), 4px 6px 3px rgb(60, 255, 0);
+    padding: 4px 15px 4px 15px;
+    font-size: 2rem;
+  }
+
+  > a > img {
+    width: 45px;
+    height: 45px;
+  }
+}
