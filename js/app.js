@@ -119,13 +119,15 @@ function resetState() {
 }
 
 function winState() {
-  // winSound.play();
+  winSound.play();
+  setTimeout(function () {
+    cashSound.play();
+  }, 3000);
   displayText('.main-title', '🎉WOW!!! GUESSED IT!!🎉');
   displayText('.message', '🐱‍👤🎉🎊WOW!!! YOU GUESS THE NUMBER!!! ');
   displayText('#q-box', randomNumber);
   changeProperty('body', 'background', '#6d014e');
   randomNumber = generateRandomNumber(maxBoundary);
-  cashSound.play();
 }
 
 function loseState() {
