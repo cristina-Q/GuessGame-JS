@@ -16219,10 +16219,35 @@ a.text-custom:focus {
   box-shadow: 1px -1px 11px 2px #222020, inset -5px 5px 3px rgba(0, 0, 0, 0.5), inset 4px 4px 10px rgba(0, 0, 0, 0.3);
   transition: all 0.5s ease;
 }
-.sociallocker .sociallocker-content a .img-wrapper img {
-  width: 120px;
+.sociallocker .sociallocker-content a .img-wrapper {
+  position: relative;
 }
-.sociallocker .sociallocker-links .social-link {
+.sociallocker .sociallocker-content a .img-wrapper img {
+  position: absolute;
+  width: 140px;
+  top: -72px;
+  left: -42px;
+}
+.sociallocker .sociallocker-content .sociallocker-overlay-unlock {
+  position: absolute;
+  letter-spacing: 0.1rem;
+  text-shadow: 2px 2px 2px black;
+  width: 45%;
+  height: 50%;
+  top: 45%;
+  left: 2%;
+}
+.sociallocker .sociallocker-overlay {
+  padding: 15px;
+  background-color: rgba(0, 0, 0, 0.6);
+  letter-spacing: 0.3rem;
+  font-size: 18px;
+}
+.sociallocker .sociallocker-overlay i {
+  font-size: 35px;
+}
+
+.sociallocker-links .social-link {
   text-decoration: none;
   color: #ffffff;
   display: inline-block;
@@ -16231,32 +16256,16 @@ a.text-custom:focus {
   overflow: hidden;
   margin-right: 5px;
 }
-.sociallocker .sociallocker-links .social-link i {
+.sociallocker-links .social-link i {
   display: flex;
   align-items: center;
   justify-content: center;
   height: 100%;
 }
-.sociallocker .sociallocker-links .social-link:hover i {
+.sociallocker-links .social-link:hover i {
   background-color: rgba(0, 0, 0, 0.1);
   transform: scale(1.7);
   transition: all 1s;
-}
-.sociallocker .sociallocker-overlay {
-  padding: 10px;
-}
-.sociallocker .sociallocker-overlay p,
-.sociallocker .sociallocker-overlay i {
-  text-shadow: 0 8px 0 #202020;
-}
-
-.sociallocker-overlay {
-  background-color: rgba(0, 0, 0, 0.6);
-  font-size: 20px;
-  transition: all 0.2s ease;
-}
-.sociallocker-overlay i {
-  font-size: 35px;
 }
 
 .sociallocker:hover .sociallocker-overlay {
@@ -16279,6 +16288,14 @@ a.text-custom:focus {
 
 .pi {
   background-color: #d9303c;
+}
+
+.stay-js {
+  top: 0;
+}
+
+.hidden {
+  display: none;
 }
 
 body {

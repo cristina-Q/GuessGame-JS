@@ -43,8 +43,9 @@
 
 <body>
   <main class="container-fluid main">
+    <a id="top"></a>
     <header class="row flex-column">
-      <div class="header-top-wrapper d-flex my-5 mx-4 ">
+      <div class="header-top-wrapper d-flex m-4">
         <button class="new-game border border-custom bg-transparent p-2 text-custom mr-2">
           New Game!
         </button>
@@ -186,9 +187,9 @@
     </main>
   </main>
 
-  <footer class="container-fluid ">
+  <footer class="container-fluid mb-5">
     <div
-      class="sociallocker-wrapper d-flex justify-content-center align-items-centerd-flex justify-content-center align-items-center m-5"
+      class="sociallocker-wrapper d-flex justify-content-center align-items-centerd-flex justify-content-center align-items-center my-4"
     >
       <div
         class="sociallocker d-flex justify-content-center align-items-centerd-flex justify-content-center align-items-center"
@@ -209,7 +210,7 @@
           </a>
 
           <a
-            href="#"
+            href="//www.pinterest.com/pin/create/button/"
             class="social-link pi"
           >
             <i class="fab fa-pinterest-p"></i>
@@ -218,7 +219,8 @@
 
         <div class="sociallocker-content">
           <a
-            href="#q-box"
+            class="unlock-content"
+            href="#top"
             role="button"
           >
             <div class="img-wrapper">
@@ -228,10 +230,15 @@
               >
             </div>
           </a>
+
+          <div class="d-none sociallocker-overlay-unlock">
+            <p class="text-left">Use to break the box</p>
+          </div>
+
         </div>
 
-        <div class="sociallocker-overlay d-flex flex-column">
-          <p>Share to Unlock</p>
+        <div class="sociallocker-overlay">
+          <p class="d-inline-block ">Share to Unlock</p>
           <i class="fa fa-lock"></i>
         </div>
       </div>
@@ -242,6 +249,3 @@
 </body>
 
 </html>
-
-
-<!-- -->

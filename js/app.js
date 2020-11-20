@@ -37,10 +37,7 @@ form.addEventListener(
 
     // When input number is OUT of range
     else if (userGuess === 0 || userGuess > 100 || userGuess < 0) {
-      displayText(
-        `.message`,
-        `Please insert a NUMBER between 1 and ${maxBoundary}`,
-      );
+      displayText(`.message`, `Please insert a NUMBER between 1 and ${maxBoundary}`);
     }
 
     // When input number is NOT the same as random one but still in range
@@ -149,6 +146,14 @@ function newGameState() {
   resetState();
 }
 
+function breakBox() {
+  winSound.play();
+  displayText('.main-title', 'WOW!!! YOU DID IT!⛏⛏⛏');
+  displayText('.message', '⛏⛏WOW!!! YOU BREAK THE BOX!!!⛏⛏');
+  displayText('#q-box', randomNumber);
+  changeProperty('body', 'background', '#6d014e');
+}
+
 //--------------  precision estimator  --------------
 function guideGuess(inputNumber, generatedNumber) {
   let guide;
@@ -178,3 +183,36 @@ function guideGuess(inputNumber, generatedNumber) {
 
   return guide;
 }
+
+/* --------------------------------- sociallocker function */
+(function () {
+  let sociallocker = document.querySelector('.sociallocker');
+  if (!sociallocker) return;
+
+  sociallocker.querySelectorAll('.sociallocker-links a').forEach(function (anchor) {
+    anchor.onclick = function (e) {
+      let open_window = window.open(
+        this.href,
+        'Share Link',
+        'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600',
+      );
+
+      let check_window_close = setInterval(function () {
+        if (open_window.closed || open_window == null) {
+          clearInterval(check_window_close);
+          document.querySelector('.sociallocker-links').classList.add('hidden'); // not working ??? :(
+          document.querySelector('.sociallocker-overlay').style.display = 'none'; // arrr working
+          document.querySelector('.sociallocker-content').classList.add('stay-js'); //  not working ??? :(
+          document.querySelector('.sociallocker-overlay-unlock').classList.remove('d-none'); // not working ??? :(
+          document.querySelector('.unlock-content').onclick = breakBox;
+
+          document.querySelector('.sociallocker-overlay-unlock').classList.add('hidden');
+          document.querySelector('.sociallocker-links').classList.remove('hidden');
+          document.querySelector('.sociallocker-overlay').classList.remove('hidden');
+        }
+      }, 1000);
+
+      e.preventDefault();
+    };
+  });
+})();
