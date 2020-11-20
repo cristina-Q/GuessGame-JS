@@ -18,6 +18,9 @@
   }
 
   .fb-box {
+    @include media-breakpoint-down(xs) {
+      display: none;
+    }
     .fb-share-wrapper {
       margin-bottom: 0; //overwrite bootstrap reboot
 

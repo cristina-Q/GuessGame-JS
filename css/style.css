@@ -16171,6 +16171,11 @@ a.text-custom:focus {
   font-size: 25px;
   font-style: normal;
 }
+@media (max-width: 575.98px) {
+  .header-top-wrapper .fb-box {
+    display: none;
+  }
+}
 .header-top-wrapper .fb-box .fb-share-wrapper {
   margin-bottom: 0;
 }
