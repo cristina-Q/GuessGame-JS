@@ -16161,41 +16161,38 @@ a.text-custom:focus {
   color: #fff;
   text-decoration: none;
 }
-.header-top-wrapper a .highscore-ico {
+.header-top-wrapper .highscore-box {
+  position: relative;
+}
+.header-top-wrapper .highscore-box .highscore-wrapper {
+  margin-bottom: 0;
+}
+.header-top-wrapper .highscore-box .highscore-wrapper .highscore-ico {
   font-size: 25px;
   font-style: normal;
 }
-.header-top-wrapper .fb-box {
-  position: relative;
+.header-top-wrapper .fb-box .fb-share-wrapper {
+  margin-bottom: 0;
 }
-.header-top-wrapper .fb-box:hover .fb-share {
-  transform: scale(1.7);
-}
-.header-top-wrapper .fb-box p {
-  position: absolute;
-  bottom: -21px;
-  right: -88px;
-}
-.header-top-wrapper .fb-box a > p > span {
-  color: var(--primary);
-}
-.header-top-wrapper .fb-box .fb-share {
+.header-top-wrapper .fb-box .fb-share-wrapper .fb-ico {
   background-color: var(--primary);
   color: #fff;
   text-shadow: 4px 4px 2px #3a3a3a, 4px 6px 3px #3cff00;
-  padding: 4px 15px 4px 15px;
+  padding: 4px 18px 4px 18px;
   font-size: 2rem;
 }
-.header-top-wrapper .fb-box > a > img {
-  width: 45px;
-  height: 45px;
+.header-top-wrapper .fb-box .fb-share-wrapper span {
+  align-self: flex-end;
+}
+.header-top-wrapper .fb-box .fb-share-wrapper span > span {
+  color: var(--primary);
 }
 
 .sociallocker {
   position: relative;
   width: 100%;
-  max-width: 400px;
-  height: 100px;
+  max-width: 300px;
+  height: 150px;
   background-color: #222020;
   overflow: hidden;
   box-shadow: 1px -1px 11px 2px #222020, inset -5px 5px 3px rgba(0, 0, 0, 0.5), inset 4px 4px 10px rgba(0, 0, 0, 0.3);
@@ -16217,11 +16214,8 @@ a.text-custom:focus {
   box-shadow: 1px -1px 11px 2px #222020, inset -5px 5px 3px rgba(0, 0, 0, 0.5), inset 4px 4px 10px rgba(0, 0, 0, 0.3);
   transition: all 0.5s ease;
 }
-.sociallocker .sociallocker-content a .img-wrapper {
-  padding: 7px;
-}
 .sociallocker .sociallocker-content a .img-wrapper img {
-  width: 75px;
+  width: 120px;
 }
 .sociallocker .sociallocker-links .social-link {
   text-decoration: none;
@@ -16242,6 +16236,13 @@ a.text-custom:focus {
   background-color: rgba(0, 0, 0, 0.1);
   transform: scale(1.7);
   transition: all 1s;
+}
+.sociallocker .sociallocker-overlay {
+  padding: 10px;
+}
+.sociallocker .sociallocker-overlay p,
+.sociallocker .sociallocker-overlay i {
+  text-shadow: 0 8px 0 #202020;
 }
 
 .sociallocker-overlay {

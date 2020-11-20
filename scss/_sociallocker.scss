@@ -1,8 +1,8 @@
 .sociallocker {
   position: relative;
   width: 100%;
-  max-width: 400px;
-  height: 100px;
+  max-width: 300px;
+  height: 150px;
   background-color: #222020;
   overflow: hidden;
   box-shadow: 1px -1px 11px 2px #222020, inset -5px 5px 3px rgba(0, 0, 0, 0.5),
@@ -31,10 +31,8 @@
 
     a {
       .img-wrapper {
-        padding: 7px;
-
         img {
-          width: 75px;
+          width: 120px;
         }
       }
     }
@@ -63,6 +61,14 @@
 
         transition: all 1s;
       }
+    }
+  }
+
+  .sociallocker-overlay {
+    padding: 10px;
+    p,
+    i {
+      text-shadow: 0 8px 0 #202020;
     }
   }
 }
