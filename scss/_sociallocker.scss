@@ -1,0 +1,101 @@
+.sociallocker {
+  position: relative;
+  width: 100%;
+  max-width: 400px;
+  height: 100px;
+  background-color: #222020;
+  overflow: hidden;
+  box-shadow: 1px -1px 11px 2px #222020, inset -5px 5px 3px rgba(0, 0, 0, 0.5),
+    inset 4px 4px 10px rgba(0, 0, 0, 0.3);
+
+  // stack layers
+  .sociallocker-overlay,
+  .sociallocker-content,
+  .sociallocker-links {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 0;
+    left: 0;
+  }
+
+  .sociallocker-content {
+    background-color: #d12a2a;
+    box-shadow: 1px -1px 11px 2px #222020, inset -5px 5px 3px rgba(0, 0, 0, 0.5),
+      inset 4px 4px 10px rgba(0, 0, 0, 0.3);
+
+    transition: all 0.5s ease;
+
+    a {
+      .img-wrapper {
+        padding: 7px;
+
+        img {
+          width: 75px;
+        }
+      }
+    }
+  }
+
+  .sociallocker-links {
+    .social-link {
+      text-decoration: none;
+      color: #ffffff;
+      display: inline-block;
+      width: 60px;
+      height: 60px;
+      overflow: hidden;
+      margin-right: 5px;
+
+      i {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+      }
+
+      &:hover i {
+        background-color: rgba(0, 0, 0, 0.1);
+        transform: scale(1.7);
+
+        transition: all 1s;
+      }
+    }
+  }
+}
+
+.sociallocker-overlay {
+  background-color: rgba(0, 0, 0, 0.6);
+  font-size: 20px;
+
+  transition: all 0.2s ease;
+
+  i {
+    font-size: 35px;
+  }
+}
+
+.sociallocker:hover .sociallocker-overlay {
+  top: -100%;
+
+  transition: all 0.5s linear;
+}
+
+.sociallocker:hover .sociallocker-content {
+  top: 100%;
+
+  transition: all 0.5s linear;
+}
+
+.fb {
+  background-color: #4561a8;
+}
+.tw {
+  background-color: #17adea;
+}
+.pi {
+  background-color: #d9303c;
+}

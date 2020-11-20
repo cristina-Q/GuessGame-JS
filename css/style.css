@@ -11,23 +11,6 @@
  * License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)
  */
 @font-face {
-  font-family: "Font Awesome 5 Free";
-  font-style: normal;
-  font-weight: 400;
-  font-display: block;
-  src: url("../webfonts/fa-regular-400.eot");
-  src: url("../webfonts/fa-regular-400.eot?#iefix") format("embedded-opentype"), url("../webfonts/fa-regular-400.woff2") format("woff2"), url("../webfonts/fa-regular-400.woff") format("woff"), url("../webfonts/fa-regular-400.ttf") format("truetype"), url("../webfonts/fa-regular-400.svg#fontawesome") format("svg");
-}
-.far {
-  font-family: "Font Awesome 5 Free";
-  font-weight: 400;
-}
-
-/*!
- * Font Awesome Free 5.15.1 by @fontawesome - https://fontawesome.com
- * License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)
- */
-@font-face {
   font-family: "Font Awesome 5 Brands";
   font-style: normal;
   font-weight: 400;
@@ -6104,6 +6087,23 @@ readers do not read off random characters that represent icons */
   overflow: visible;
   position: static;
   width: auto;
+}
+
+/*!
+ * Font Awesome Free 5.15.1 by @fontawesome - https://fontawesome.com
+ * License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)
+ */
+@font-face {
+  font-family: "Font Awesome 5 Free";
+  font-style: normal;
+  font-weight: 400;
+  font-display: block;
+  src: url("../webfonts/fa-regular-400.eot");
+  src: url("../webfonts/fa-regular-400.eot?#iefix") format("embedded-opentype"), url("../webfonts/fa-regular-400.woff2") format("woff2"), url("../webfonts/fa-regular-400.woff") format("woff"), url("../webfonts/fa-regular-400.ttf") format("truetype"), url("../webfonts/fa-regular-400.svg#fontawesome") format("svg");
+}
+.far {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 400;
 }
 
 /*!
@@ -16157,36 +16157,122 @@ a.text-custom:focus {
   --primary: rgb(42, 179, 60);
 }
 
-.social-links > a {
-  color: var(--primary);
+.header-top-wrapper a {
+  color: #fff;
   text-decoration: none;
 }
-.social-links span {
-  color: white;
+.header-top-wrapper a .highscore-ico {
+  font-size: 25px;
+  font-style: normal;
 }
-.social-links i {
+.header-top-wrapper .fb-box {
+  position: relative;
+}
+.header-top-wrapper .fb-box:hover .fb-share {
+  transform: scale(1.7);
+}
+.header-top-wrapper .fb-box p {
+  position: absolute;
+  bottom: -21px;
+  right: -88px;
+}
+.header-top-wrapper .fb-box a > p > span {
+  color: var(--primary);
+}
+.header-top-wrapper .fb-box .fb-share {
   background-color: var(--primary);
   color: #fff;
   text-shadow: 4px 4px 2px #3a3a3a, 4px 6px 3px #3cff00;
   padding: 4px 15px 4px 15px;
   font-size: 2rem;
 }
-.social-links > a > img {
+.header-top-wrapper .fb-box > a > img {
   width: 45px;
   height: 45px;
 }
 
-.sociallocker-content {
-  padding: 7px;
-  border: 5px inset #4d4c4c;
-  outline-style: groove;
-  outline-color: #4d4c4cb5;
+.sociallocker {
+  position: relative;
+  width: 100%;
+  max-width: 400px;
+  height: 100px;
+  background-color: #222020;
+  overflow: hidden;
   box-shadow: 1px -1px 11px 2px #222020, inset -5px 5px 3px rgba(0, 0, 0, 0.5), inset 4px 4px 10px rgba(0, 0, 0, 0.3);
-  background-color: #5bc54d;
-  box-shadow: 1px 1px 20px var(--primary);
 }
-.sociallocker-content img {
+.sociallocker .sociallocker-overlay,
+.sociallocker .sociallocker-content,
+.sociallocker .sociallocker-links {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 0;
+  left: 0;
+}
+.sociallocker .sociallocker-content {
+  background-color: #d12a2a;
+  box-shadow: 1px -1px 11px 2px #222020, inset -5px 5px 3px rgba(0, 0, 0, 0.5), inset 4px 4px 10px rgba(0, 0, 0, 0.3);
+  transition: all 0.5s ease;
+}
+.sociallocker .sociallocker-content a .img-wrapper {
+  padding: 7px;
+}
+.sociallocker .sociallocker-content a .img-wrapper img {
   width: 75px;
+}
+.sociallocker .sociallocker-links .social-link {
+  text-decoration: none;
+  color: #ffffff;
+  display: inline-block;
+  width: 60px;
+  height: 60px;
+  overflow: hidden;
+  margin-right: 5px;
+}
+.sociallocker .sociallocker-links .social-link i {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+.sociallocker .sociallocker-links .social-link:hover i {
+  background-color: rgba(0, 0, 0, 0.1);
+  transform: scale(1.7);
+  transition: all 1s;
+}
+
+.sociallocker-overlay {
+  background-color: rgba(0, 0, 0, 0.6);
+  font-size: 20px;
+  transition: all 0.2s ease;
+}
+.sociallocker-overlay i {
+  font-size: 35px;
+}
+
+.sociallocker:hover .sociallocker-overlay {
+  top: -100%;
+  transition: all 0.5s linear;
+}
+
+.sociallocker:hover .sociallocker-content {
+  top: 100%;
+  transition: all 0.5s linear;
+}
+
+.fb {
+  background-color: #4561a8;
+}
+
+.tw {
+  background-color: #17adea;
+}
+
+.pi {
+  background-color: #d9303c;
 }
 
 body {
