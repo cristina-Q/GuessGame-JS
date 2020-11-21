@@ -4,6 +4,12 @@
     text-decoration: none;
   }
 
+  .fb-box:hover {
+    transform: scale(1.2);
+
+    transition: transform 0.5s;
+  }
+
   .highscore-box {
     position: relative;
 
@@ -11,8 +17,9 @@
       margin-bottom: 0;
 
       .highscore-ico {
-        font-size: 25px;
+        font-size: 1.5rem;
         font-style: normal;
+        margin-bottom: -3px;
       }
     }
   }
@@ -25,11 +32,15 @@
       margin-bottom: 0; //overwrite bootstrap reboot
 
       .fb-ico {
-        background-color: $primary;
+        background-color: var(--primary);
         color: #fff;
-        text-shadow: 4px 4px 2px rgb(58, 58, 58), 4px 6px 3px rgb(60, 255, 0);
+        text-shadow: 4px 4px 2px #3a3a3a, 4px 6px 3px #3cff00;
         padding: 4px 18px 4px 18px;
-        font-size: 2rem;
+        font-size: 1.5rem;
+        border: 1px inset rgba(22, 18, 18, 0.6);
+        box-shadow: 8px 0px 0px 0px #6ebb4b, 1px 8px 0px 0px #167e30, -8px 0px 0px 0px #026e11,
+          0px 0px 0px 8px #6ff163, inset 7px -3px 23px 19px rgba(0, 0, 0, 0.46),
+          inset -3px -2px 18px 10px rgba(0, 0, 0, 0.46);
       }
 
       span {

@@ -16161,6 +16161,10 @@ a.text-custom:focus {
   color: #fff;
   text-decoration: none;
 }
+.header-top-wrapper .fb-box:hover {
+  transform: scale(1.2);
+  transition: transform 0.5s;
+}
 .header-top-wrapper .highscore-box {
   position: relative;
 }
@@ -16168,8 +16172,9 @@ a.text-custom:focus {
   margin-bottom: 0;
 }
 .header-top-wrapper .highscore-box .highscore-wrapper .highscore-ico {
-  font-size: 25px;
+  font-size: 1.5rem;
   font-style: normal;
+  margin-bottom: -3px;
 }
 @media (max-width: 575.98px) {
   .header-top-wrapper .fb-box {
@@ -16184,7 +16189,9 @@ a.text-custom:focus {
   color: #fff;
   text-shadow: 4px 4px 2px #3a3a3a, 4px 6px 3px #3cff00;
   padding: 4px 18px 4px 18px;
-  font-size: 2rem;
+  font-size: 1.5rem;
+  border: 1px inset rgba(22, 18, 18, 0.6);
+  box-shadow: 8px 0px 0px 0px #6ebb4b, 1px 8px 0px 0px #167e30, -8px 0px 0px 0px #026e11, 0px 0px 0px 8px #6ff163, inset 7px -3px 23px 19px rgba(0, 0, 0, 0.46), inset -3px -2px 18px 10px rgba(0, 0, 0, 0.46);
 }
 .header-top-wrapper .fb-box .fb-share-wrapper span {
   align-self: flex-end;
@@ -16337,7 +16344,7 @@ body main .q-box {
 }
 body main .q-box #q-box {
   color: #222020;
-  text-shadow: 4px 4px 2px #706f6f;
+  text-shadow: 3px -3px 2px #737070, 6px -5px 4px #3cff00;
 }
 
 .right-side > div p:nth-child(1) {

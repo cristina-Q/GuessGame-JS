@@ -2,10 +2,13 @@ const form = document.querySelector('#form');
 const userNumber = document.querySelector('.user-input');
 const winSound = new Audio('./media/winsound.mp3');
 const loseSound = new Audio('./media/losesound.mp3');
-const cashSound = new Audio('media/cashsound.mp3');
+const cashSound = new Audio('./media/cashsound.mp3');
+const breakSound = new Audio('./media/chop-wood.mp3');
+
 winSound.volume = 0.4;
 loseSound.volume = 0.4;
 cashSound.volume = 0.4;
+breakSound.volume = 0.4;
 
 let maxBoundary = 100;
 let score = 0;
@@ -148,11 +151,11 @@ function newGameState() {
 }
 
 function breakBox() {
-  winSound.play();
+  breakSound.play();
   displayText('.main-title', 'WOW!!! YOU DID IT!⛏⛏⛏');
-  displayText('.message', '⛏⛏WOW!!! YOU BREAK THE BOX!!!⛏⛏');
+  displayText('.message', '⛏⛏!!! Now use the revealed NUMBER !!!⛏⛏');
   displayText('#q-box', randomNumber);
-  changeProperty('body', 'background', '#6d014e');
+  changeProperty('body', 'background', '#423d3d');
 }
 
 //--------------  precision estimator  --------------
