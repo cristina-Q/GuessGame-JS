@@ -5,7 +5,7 @@
   }
 
   .fb-box:hover {
-    transform: scale(1.2);
+    transform: scale(0.9);
 
     transition: transform 0.5s;
   }
@@ -28,6 +28,7 @@
     @include media-breakpoint-down(xs) {
       display: none;
     }
+    transition: transform 0.5s;
     .fb-share-wrapper {
       margin-bottom: 0; //overwrite bootstrap reboot
 

@@ -16162,7 +16162,7 @@ a.text-custom:focus {
   text-decoration: none;
 }
 .header-top-wrapper .fb-box:hover {
-  transform: scale(1.2);
+  transform: scale(0.9);
   transition: transform 0.5s;
 }
 .header-top-wrapper .highscore-box {
@@ -16175,6 +16175,9 @@ a.text-custom:focus {
   font-size: 1.5rem;
   font-style: normal;
   margin-bottom: -3px;
+}
+.header-top-wrapper .fb-box {
+  transition: transform 0.5s;
 }
 @media (max-width: 575.98px) {
   .header-top-wrapper .fb-box {
