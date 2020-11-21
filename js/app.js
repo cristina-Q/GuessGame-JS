@@ -206,13 +206,13 @@ function guideGuess(inputNumber, generatedNumber) {
           document.querySelector('.sociallocker-content').classList.add('d-none');
           document.querySelector('.sociallocker-content-unlock').classList.remove('d-none');
 
-          if (document.querySelector('.unlock-content').onclick) {
+          document.querySelector('.unlock-content').addEventListener('click', () => {
             breakBox();
             document.querySelector('.sociallocker-links').classList.remove('d-none');
             document.querySelector('.sociallocker-overlay').classList.remove('d-none');
             document.querySelector('.sociallocker-content').classList.remove('d-none');
             document.querySelector('.sociallocker-content-unlock').classList.add('d-none');
-          }
+          });
         }
       }, 1000);
 
