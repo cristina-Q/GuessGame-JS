@@ -11,7 +11,8 @@
   // stack layers
   .sociallocker-overlay,
   .sociallocker-content,
-  .sociallocker-links {
+  .sociallocker-links,
+  .sociallocker-content-unlock {
     position: absolute;
     width: 100%;
     height: 100%;
@@ -29,26 +30,36 @@
 
     transition: all 0.5s ease;
 
-    a {
-      .img-wrapper {
-        position: relative;
-        img {
-          position: absolute;
-          width: 140px;
-          top: -72px;
-          left: -42px;
-        }
+    .img-wrapper {
+      position: relative;
+      img {
+        position: absolute;
+        width: 140px;
+        top: -72px;
+        left: -42px;
+      }
+    }
+  }
+
+  .sociallocker-content-unlock {
+    .img-wrapper {
+      position: relative;
+      img {
+        position: absolute;
+        width: 140px;
+        top: -70px;
+        left: -29px;
       }
     }
 
-    .sociallocker-overlay-unlock {
+    p {
       position: absolute;
       letter-spacing: 0.1rem;
       text-shadow: 2px 2px 2px black;
       width: 45%;
       height: 50%;
       top: 45%;
-      left: 2%;
+      left: 5%;
     }
   }
 
@@ -114,8 +125,4 @@
 
 .stay-js {
   top: 0;
-}
-
-.hidden {
-  display: none;
 }

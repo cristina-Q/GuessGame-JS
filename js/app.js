@@ -13,6 +13,7 @@ let highscore = Number(localStorage.getItem('highscore'));
 displayText('.highscore', highscore);
 
 let randomNumber = generateRandomNumber(maxBoundary);
+// document.querySelector('.sociallocker-links').classList.add('d-none'); working here
 
 form.addEventListener(
   'submit',
@@ -200,15 +201,18 @@ function guideGuess(inputNumber, generatedNumber) {
       let check_window_close = setInterval(function () {
         if (open_window.closed || open_window == null) {
           clearInterval(check_window_close);
-          document.querySelector('.sociallocker-links').classList.add('hidden'); // not working ??? :(
-          document.querySelector('.sociallocker-overlay').style.display = 'none'; // arrr working
-          document.querySelector('.sociallocker-content').classList.add('stay-js'); //  not working ??? :(
-          document.querySelector('.sociallocker-overlay-unlock').classList.remove('d-none'); // not working ??? :(
-          document.querySelector('.unlock-content').onclick = breakBox;
+          document.querySelector('.sociallocker-links').classList.add('d-none');
+          document.querySelector('.sociallocker-overlay').classList.add('d-none');
+          document.querySelector('.sociallocker-content').classList.add('d-none');
+          document.querySelector('.sociallocker-content-unlock').classList.remove('d-none');
 
-          document.querySelector('.sociallocker-overlay-unlock').classList.add('hidden');
-          document.querySelector('.sociallocker-links').classList.remove('hidden');
-          document.querySelector('.sociallocker-overlay').classList.remove('hidden');
+          if (document.querySelector('.unlock-content').onclick) {
+            breakBox();
+            document.querySelector('.sociallocker-links').classList.remove('d-none');
+            document.querySelector('.sociallocker-overlay').classList.remove('d-none');
+            document.querySelector('.sociallocker-content').classList.remove('d-none');
+            document.querySelector('.sociallocker-content-unlock').classList.add('d-none');
+          }
         }
       }, 1000);
 

@@ -16204,7 +16204,8 @@ a.text-custom:focus {
 }
 .sociallocker .sociallocker-overlay,
 .sociallocker .sociallocker-content,
-.sociallocker .sociallocker-links {
+.sociallocker .sociallocker-links,
+.sociallocker .sociallocker-content-unlock {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -16219,23 +16220,32 @@ a.text-custom:focus {
   box-shadow: 1px -1px 11px 2px #222020, inset -5px 5px 3px rgba(0, 0, 0, 0.5), inset 4px 4px 10px rgba(0, 0, 0, 0.3);
   transition: all 0.5s ease;
 }
-.sociallocker .sociallocker-content a .img-wrapper {
+.sociallocker .sociallocker-content .img-wrapper {
   position: relative;
 }
-.sociallocker .sociallocker-content a .img-wrapper img {
+.sociallocker .sociallocker-content .img-wrapper img {
   position: absolute;
   width: 140px;
   top: -72px;
   left: -42px;
 }
-.sociallocker .sociallocker-content .sociallocker-overlay-unlock {
+.sociallocker .sociallocker-content-unlock .img-wrapper {
+  position: relative;
+}
+.sociallocker .sociallocker-content-unlock .img-wrapper img {
+  position: absolute;
+  width: 140px;
+  top: -70px;
+  left: -29px;
+}
+.sociallocker .sociallocker-content-unlock p {
   position: absolute;
   letter-spacing: 0.1rem;
   text-shadow: 2px 2px 2px black;
   width: 45%;
   height: 50%;
   top: 45%;
-  left: 2%;
+  left: 5%;
 }
 .sociallocker .sociallocker-overlay {
   padding: 15px;
@@ -16292,10 +16302,6 @@ a.text-custom:focus {
 
 .stay-js {
   top: 0;
-}
-
-.hidden {
-  display: none;
 }
 
 body {
