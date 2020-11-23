@@ -16165,16 +16165,14 @@ a.text-custom:focus {
   transform: scale(0.9);
   transition: transform 0.5s;
 }
-.header-top-wrapper .highscore-box {
-  position: relative;
-}
-.header-top-wrapper .highscore-box .highscore-wrapper {
-  margin-bottom: 0;
+@media (max-width: 575.98px) {
+  .header-top-wrapper .highscore-box {
+    margin-left: auto;
+  }
 }
 .header-top-wrapper .highscore-box .highscore-wrapper .highscore-ico {
   font-size: 1.5rem;
   font-style: normal;
-  margin-bottom: -3px;
 }
 .header-top-wrapper .fb-box {
   transition: transform 0.5s;
@@ -16183,9 +16181,6 @@ a.text-custom:focus {
   .header-top-wrapper .fb-box {
     display: none;
   }
-}
-.header-top-wrapper .fb-box .fb-share-wrapper {
-  margin-bottom: 0;
 }
 .header-top-wrapper .fb-box .fb-share-wrapper .fb-ico {
   background-color: var(--primary);

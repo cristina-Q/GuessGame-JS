@@ -43,31 +43,31 @@
 
 <body>
   <main class="container-fluid main">
-    <a id="top"></a>
-    <header class="row flex-column">
-      <div class="header-top-wrapper d-flex m-4">
+    <header
+      id="top"
+      class="row flex-column"
+    >
+      <div class="header-top-wrapper d-flex justify-content-between m-4">
         <button class="new-game border border-custom bg-transparent text-custom mr-5">
           New Game!
         </button>
 
-        <div class="highscore-box d-flex align-items-end ">
-          <p class="highscore-wrapper align-items-end">
-            <i class="highscore-ico">
-              🏆
-            </i>
+        <div class="highscore-box d-flex align-items-end">
+          <div class="highscore-wrapper d-flex align-items-end">
+            <i class="highscore-ico">🏆</i>
             HighScore: <span class="highscore text-custom ml-2"> 0</span>
-          </p>
+          </div>
         </div>
 
         <a
-          class="flex-shrink-0 fb-toplink ml-auto"
+          class="flex-shrink-0 fb-toplink"
           href="https://www.facebook.com/sharer/sharer.php?u=https://guessgame-js.netlify.app/"
         >
           <div class="fb-box">
-            <p class="fb-share-wrapper d-flex align-items-start flex-shrink-0">
+            <div class="fb-share-wrapper d-flex align-items-start flex-shrink-0">
               <i class="fb-ico mr-3">f</i>
               <span> >> <span>share</span></span>
-            </p>
+            </div>
           </div>
         </a>
 
