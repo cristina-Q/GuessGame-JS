@@ -127,13 +127,13 @@ fieldset {
     -webkit-appearance: none;
   }
 
-  // &:active {
-  //   border-color: #6ff163;
-  // }
+  &:active {
+    border-color: #6ff163;
+  }
 
-  // &:focus {
-  //   outline: none;
-  // }
+  &:focus {
+    outline: none;
+  }
 
   &[placeholder] {
     text-align: center;

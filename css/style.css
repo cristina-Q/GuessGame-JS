@@ -16408,6 +16408,12 @@ fieldset p:nth-child(2)::before {
 .user-input::-webkit-inner-spin-button, .user-input::-webkit-outer-spin-button {
   -webkit-appearance: none;
 }
+.user-input:active {
+  border-color: #6ff163;
+}
+.user-input:focus {
+  outline: none;
+}
 .user-input[placeholder] {
   text-align: center;
 }
