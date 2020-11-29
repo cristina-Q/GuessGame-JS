@@ -16157,9 +16157,18 @@ a.text-custom:focus {
   --primary: rgb(42, 179, 60);
 }
 
+.header-top-wrapper {
+  color: #fff;
+}
 .header-top-wrapper a {
   color: #fff;
   text-decoration: none;
+}
+.header-top-wrapper .new-game {
+  color: var(--primary);
+}
+.header-top-wrapper .new-game:hover {
+  color: white;
 }
 .header-top-wrapper .fb-box:hover {
   transform: scale(0.9);

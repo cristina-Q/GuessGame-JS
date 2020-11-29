@@ -1,10 +1,11 @@
 # Try Guess
 
-> > > ### Fully **responsive**
+> > > ### Fully responsive
 
 ### [Guess my Number Game - JavaScript](https://guessgame-js.netlify.app/)
 
-[![](media/mob.png)](https://guessgame-js.netlify.app/)
-> #                       🎞🎞🎞🎞🎞🎞🎞🎞🎞🎞🎞🎞🎞🎞🎞🎞🎞🎞🎞🎞🎞🎞🎞🎞🎞🎞🎞🎞🎞🎞🎞🎞🎞🎞🎞🎞🎞🎞🎞🎞
-[![](media/laptop.png)](https://guessgame-js.netlify.app/)
+[![](media/screenshot.png)](https://guessgame-js.netlify.app/)
 
+# (☞ ﾟヮﾟ)☞---------------------------------☜(ﾟヮﾟ ☜)
+
+[![](media/screenshot-laptop.png)](https://guessgame-js.netlify.app/)

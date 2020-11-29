@@ -1,7 +1,15 @@
 .header-top-wrapper {
+  color: #fff;
   a {
     color: $white;
     text-decoration: none;
+  }
+
+  .new-game {
+    color: $primary;
+    &:hover {
+      color: white;
+    }
   }
 
   .fb-box:hover {
