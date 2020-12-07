@@ -16170,10 +16170,6 @@ a.text-custom:focus {
 .header-top-wrapper .new-game:hover {
   color: white;
 }
-.header-top-wrapper .fb-box:hover {
-  transform: scale(0.9);
-  transition: transform 0.5s;
-}
 @media (max-width: 575.98px) {
   .header-top-wrapper .highscore-box {
     margin-left: auto;
@@ -16199,6 +16195,12 @@ a.text-custom:focus {
   font-size: 1.5rem;
   border: 1px inset rgba(22, 18, 18, 0.6);
   box-shadow: 8px 0px 0px 0px #6ebb4b, 1px 8px 0px 0px #167e30, -8px 0px 0px 0px #026e11, 0px 0px 0px 8px #6ff163, inset 7px -3px 23px 19px rgba(0, 0, 0, 0.46), inset -3px -2px 18px 10px rgba(0, 0, 0, 0.46);
+  transition: box-shadow 0.9s;
+}
+.header-top-wrapper .fb-box .fb-share-wrapper .fb-ico:hover {
+  background-color: gray;
+  box-shadow: 8px 0px 0px 0px #ffffff, 1px 8px 0px 0px #026e11, -8px 0px 0px 0px #ffffff, 0px 0px 0px 8px #6ff163, inset 7px -3px 23px 19px rgba(0, 0, 0, 0.46), inset -3px -2px 18px 10px rgba(0, 0, 0, 0.46);
+  transition: box-shadow 0.7s;
 }
 .header-top-wrapper .fb-box .fb-share-wrapper span {
   align-self: flex-end;

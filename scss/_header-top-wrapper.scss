@@ -12,12 +12,6 @@
     }
   }
 
-  .fb-box:hover {
-    transform: scale(0.9);
-
-    transition: transform 0.5s;
-  }
-
   .highscore-box {
     @include media-breakpoint-down(xs) {
       margin-left: auto;
@@ -46,6 +40,17 @@
         box-shadow: 8px 0px 0px 0px #6ebb4b, 1px 8px 0px 0px #167e30, -8px 0px 0px 0px #026e11,
           0px 0px 0px 8px #6ff163, inset 7px -3px 23px 19px rgba(0, 0, 0, 0.46),
           inset -3px -2px 18px 10px rgba(0, 0, 0, 0.46);
+
+        transition: box-shadow 0.9s;
+
+        &:hover {
+          background-color: gray;
+          box-shadow: 8px 0px 0px 0px #ffffff, 1px 8px 0px 0px #026e11, -8px 0px 0px 0px #ffffff,
+            0px 0px 0px 8px #6ff163, inset 7px -3px 23px 19px rgba(0, 0, 0, 0.46),
+            inset -3px -2px 18px 10px rgba(0, 0, 0, 0.46);
+
+          transition: box-shadow 0.7s;
+        }
       }
 
       span {
