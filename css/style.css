@@ -16379,7 +16379,7 @@ legend {
   font-size: 1.1rem;
   background-color: #737873a8;
   padding: 6px 11px;
-  color: #57af4c;
+  color: white;
   text-shadow: 3px 3px 1px black;
   box-shadow: inset -2px 5px 15px 12px rgba(0, 0, 0, 0.46), 6px 0px 7px 4px rgba(0, 0, 0, 0.46);
 }
