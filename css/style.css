@@ -16443,4 +16443,8 @@ fieldset p:nth-child(2)::before {
   color: #6ff163;
 }
 
+.heart {
+  width: 45px;
+}
+
 /*# sourceMappingURL=style.css.map */
